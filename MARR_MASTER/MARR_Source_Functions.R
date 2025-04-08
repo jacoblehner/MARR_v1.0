@@ -12,7 +12,8 @@ list.of.packages <- c(
   "ggridges",
   "tidyr",
   "sf",
-  "dplyr"
+  "dplyr",
+  "gdalraster"
 )
 # list.of.packages2 <- c("terra")
 
@@ -155,11 +156,11 @@ getSelection <- function(inel = subs.DEM, feat = RS.feat.Ras, subs.DEM = subs.DE
   windows.options(xpos = 0, ypos = 0, width = 15, height = 9)
 
   if(goal == 3){
-    subtit <- paste0("SELECT FALSE TOES/CRESTS: Class 3")
+    subtit <- paste0("SELECT OTHERS: Class 3")
   }else if(goal == 1){
-    subtit <- paste0("SELECT TRUE TOE: Class 1")
+    subtit <- paste0("SELECT DUNE TOE: Class 1")
   }else if(goal == 2){
-    subtit <- paste0("SELECT TRUE CREST: Class 2")
+    subtit <- paste0("SELECT DUNE CREST: Class 2")
   }else{
     return("Goal must be 1, 2, or 3")
   }
